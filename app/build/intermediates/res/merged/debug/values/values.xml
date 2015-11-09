@@ -10,8 +10,13 @@
     </string-array>
     <!-- From: file:/C:/android/workspace/Ribbit/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="apptheme_color">#61408c</color>
     <color name="background_purple">#3F2466</color>
+    <color name="focused_purple_button">#d6c3ed</color>
     <color name="light_gray">#bbbbbb</color>
+    <color name="light_purple_button">#e1d2f3</color>
+    <color name="pressed_purple_button">#ba9dda</color>
+    <color name="text_color">#250054</color>
     <!-- From: file:/C:/android/workspace/Ribbit/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -39,7 +44,7 @@
     <string name="error_title">We\'re sorry!</string>
     <string name="general_error">Sorry, there was an error!</string>
     <string name="hello_world">Hello world!</string>
-    <string name="login_button_label">Login</string>
+    <string name="login_button_label">SIGN IN</string>
     <string name="login_error_message">Please make sure you enter a username and password!</string>
     <string name="login_error_title">Oops!</string>
     <string name="menu_camera_label">Camera</string>
@@ -65,14 +70,37 @@
     <string name="video_size_limit_warning">The selected video must be less than 10 MB.</string>
     <!-- From: file:/C:/android/workspace/Ribbit/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:editTextBackground">@drawable/apptheme_edit_text_holo_light</item>
     </style>
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="AuthBackground">
+        <item name="android:background">@drawable/background_fill</item>
+    </style>
+    <style name="AuthBackgroundImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:src">@drawable/background</item>
+    </style>
+    <style name="AuthSubtitle" parent="AuthTitle">
+         <item name="android:layout_below">@+id/title</item>
+         <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:text">@string/subtitle</item>
+        <item name="android:layout_alignParentTop">false</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+    <style name="AuthTitle" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/app_name</item>
     </style>
 </resources>
